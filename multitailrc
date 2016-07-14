@@ -1,0 +1,209 @@
+
+colorscheme:nwnlog:nwnlog
+# Hide errors:
+cs_re:black,black:Event added while paused.*
+
+# timestamp
+cs_re:white,black:\[.+ .+ [0-9]{1,2} [0-9]{1,2}:[0-9]{2}:[0-9]{2}\]
+
+# Server messages
+cs_re:black,black,bold:\] \[Server\] 
+cs_re_s:red,black:\] \[Server\] You are now in a (Full PVP Area)
+cs_re_s:green,black,bold:\] \[Server\] You are now in a (No PVP area)
+cs_re_s:white,black:\] \[Server\] (.*)
+cs_re_s:yellow,black:\] (.*) has joined as a player\.\.
+cs_re:green,black:\] .* has joined as a player\.\.
+cs_re_s:yellow,black:\] (.*) has left as a player\.\.
+cs_re:red,black,bold:\] .* has left as a player\.\.
+cs_re_s:white,black,bold:\] (.*) \[Shout\] .*
+cs_re_s:yellow,black:\] .* (\[Shout\]) .*
+cs_re_s:black,yellow:\] .* \[Shout\] (.*)
+
+cs_re:blue,black,bold:\] Target is not diseased or poisoned\.
+cs_re:magenta,black,bold:\] You cannot enter stealth mode while in combat\.
+
+# Equipment
+cs_re_s:white,black,bold:\] Armor/Shield Applies: Skill Armor Check Penalty: (0) Arcane Spell Failure: .*
+cs_re_s:white,black,bold:\] Armor/Shield Applies: Skill Armor Check Penalty: .* Arcane Spell Failure: (0%)
+cs_re_s:red,black,bold:\] Armor/Shield Applies: Skill Armor Check Penalty: (-[0-9]+) Arcane Spell Failure: .*
+cs_re_s:red,black,bold:\] Armor/Shield Applies: Skill Armor Check Penalty: .* Arcane Spell Failure: ([1-9][0-9]*%)
+cs_re:black,black,bold:\] Armor/Shield Applies: Skill Armor Check Penalty: .* Arcane Spell Failure: .*
+cs_re_s:green,black:\] Weapon equipped as a (.*)\.
+cs_re:black,black,bold:\] Weapon equipped as a .*\.
+cs_re:black,black,bold:\] Equipped item swapped out\.
+
+
+# Party
+cs_re_s:cyan,black,bold:You have sent a Party Invitation to (.*)
+cs_re:yellow,black:You have sent a Party Invitation to
+cs_re_s:cyan,black,bold:(.*) is ignoring your Party Invitation
+cs_re:yellow,black:is ignoring your Party Invitation
+cs_re_s:cyan,black,bold:You have received a Party Invitation from (.*)
+cs_re:yellow,black:You have received a Party Invitation from
+cs_re_s:cyan,black,bold:(.*) has joined the party\.
+cs_re:yellow,black:has joined the party\.
+cs_re_s:cyan,black,bold:(.*) left the party\.
+cs_re:yellow,black:left the party
+cs_re_s:cyan,black,bold:(.*): \[Party\] .*
+cs_re:black,yellow:\[Party\]
+
+# XP
+cs_re:yellow,black,bold:\] Experience Points Gained: .*
+
+# Gold & Trade
+cs_re:yellow,black,bold:[0-9]+GP
+cs_re:yellow,black:\] Acquired [0-9]+GP
+cs_re:red,black:\] Lost [0-9]+GP
+cs_re:yellow,black:\] Acquired Item
+cs_re_s:blue,black:\] Acquired Item: (.*)
+cs_re:red,black:\] Lost Item
+cs_re_s:blue,black:\] Lost Item: (.*)
+cs_re:black,black,bold:\] Transaction Successful!
+#cs_re_s:blue:.* picked up (.*) from .*
+#cs_re_s:cyan:(.*) picked up .*
+#cs_re:yellow:.* picked up .* from .*
+
+# Resting
+cs_re_s:red,white:\] (Cancelled Rest\.)
+cs_re_s:black,white:\] (Resting.)
+cs_re_s:black,white:\] (Done resting.)
+
+# Pause / Unpause (TODO)
+
+# KILLS / DEATHS
+cs_re_s:cyan,black,bold:\] (.*) killed .*
+cs_re_s:red,black:\] .* killed (.*)
+cs_re:red,black,bold: .* killed .*
+cs_re:red,black:.* Died
+
+# separators
+cs_re:green,black:[:\(\)\+\-\=]
+
+
+# DAMAGE
+cs_re_s:white,black,bold: (.*) damages .*
+cs_re_s:cyan,black: .* damages (.*): .*
+cs_re:red,black:.* damages .*:
+cs_re:yellow,black:[0-9]+ Physical
+cs_re:yellow,black:Physical
+cs_re:blue,black,bold:[0-9]+ Cold
+cs_re:blue,black,bold:Cold
+cs_re:red,black,bold:[0-9]+ Fire
+cs_re:red,black,bold:Fire
+cs_re:cyan,black,bold:[0-9]+ Electrical
+cs_re:cyan,black,bold:Electricity
+cs_re:cyan,black,bold:Electrical
+cs_re:yellow,black,bold:[0-9]+ Divine
+cs_re:yellow,black,bold:Divine
+cs_re:red,black:[0-9]+ Negative Energy
+cs_re:red,black:Negative Energie
+cs_re:magenta,black,bold:[0-9]+ Magical
+cs_re:magenta,black,bold:Magical
+
+# Attacks & saves outcome
+cs_re:yellow,green,bold:\*hit\*
+cs_re:yellow,red,bold:\*critical hit\*
+cs_re:yellow,blue,bold:\*miss\*
+cs_re:yellow,green,bold:\*success\*
+cs_re:yellow,red,bold:\*automatic success\*
+cs_re:yellow,magenta,bold:\*parried\*
+cs_re:white,red,bold:\*failure\*
+
+# Modifiers
+cs_re:red,black:Threat Roll
+cs_re:black,red:Called Shot:
+cs_re:blue,white:(Improved )?Knockdown
+cs_re_s:white,red,bold:Called Shot: (Leg|Arm)
+cs_re:black,blue:Sneak Attack
+cs_re:white,blue:Off Hand
+cs_re:white,red:Power Attack
+cs_re:white,magenta,bold:Attack Of Opportunity
+cs_re_s:white,black,bold:\] (.*) attempts .* on
+cs_re_s:cyan,black:\] .* attempts .* on (.*) :
+cs_re_s:white,black,bold:\] (.*) attacks .*
+cs_re:blue,black,bold:\] .* attempts .* on .* : \*
+cs_re_s:cyan,black:\] .* attacks (.*) : \*.*\* :
+cs_re:yellow,black:\] .* attacks .* : \*.*\* :
+
+
+# SAVES
+cs_re_s:red,black:(Fortitude) Save
+cs_re_s:green,black,bold:(Reflex) Save
+cs_re_s:blue,black:(Will) Save
+cs_re_s:black,black,bold:vs\.? (Death)
+cs_re_s:yellow,green,bold: .* Save vs\.?.* (\*?success\*?)
+cs_re_s:yellow,blue,bold: .* Save vs\,?.* (\*?failure\*?)
+cs_re_s:white,black,bold: (.*) : .* Save vs\.? .*
+cs_re:magenta,black:.* Save vs\.? .*
+
+# Rolls / Dispel / Taunt
+cs_re:white,blue,bold:Take 20
+cs_re:magenta,black,bold:.* Dispelling vs.*
+cs_re:magenta,black:vs\. DC:
+cs_re_s:white,black,bold:\] (.*) : Initiative Roll : 
+cs_re:yellow,black,bold:.* Initiative Roll :
+#cs_re_s:white,black,bold: (.*) identified .*
+#cs_re_s:blue: .* identified (.*)
+#cs_re:green:.* identified
+cs_re_s:white,black,bold:\] (.*) Taunt :
+cs_re:magenta,black,bold:\] .* Taunt :
+cs_re_s:white,black,bold:\] (.*) Open Lock :
+cs_re:black,black,bold:\] .* Open Lock :
+cs_re_s:white,black,bold:\] (.*) Disable Trap :
+cs_re:black,black,bold:\] .* Disable Trap :
+cs_re_s:white,black,bold:\] (.*) Set Trap :
+cs_re:black,black,bold:\] .* Set Trap :
+cs_re_s:white,black,bold:\] (.*) Examine Trap :
+cs_re:black,black,bold:\] .* Examine Trap :
+cs_re_s:white,black,bold:\] (.*) Recover Trap :
+cs_re:black,black,bold:\] .* Recover Trap :
+cs_re_s:white,black,bold:\] (.*) Disable Trap :
+cs_re:black,black,bold:\] .* Disable Trap :
+cs_re_s:white,black,bold:\] (.*) Heal :
+cs_re:black,black,bold:\] .* Heal :
+cs_re_s:white,black,bold:\] (.*) Tumble :
+cs_re:black,black,bold:\] .* Tumble
+#cs_re_s:white,black,bold: (.*)
+# cs_re:white: damage
+
+# numbers
+cs_re:white,black,bold:\+?[0-9]+%?
+
+# Damage Red/Res and Immunities
+cs_re_s:white,black,bold:\] (.*) Damage Reduction absorbs .*
+cs_re_s:white,black,bold:\] (.*) Damage Resistance absorbs .*
+cs_re:white,black:\] .* Damage Reduction absorbs 
+cs_re:white,black:\] .* Damage Resistance absorbs 
+cs_re_s:white,black,bold:\] (.*) Immune to .*
+cs_re_s:yellow,black,bold:\] .* Immune to (.*)
+cs_re:blue,black,bold:\] .* : Immune to .*
+cs_re:black,black,bold:\] .* \*target concealed: [0-9]+%\* :
+
+# CASTING
+cs_re_s:white,black,bold:\] (.*) casting .*
+cs_re_s:white,black,bold:\] (.*) casts .*
+cs_re_s:magenta,black:\] .* casting (.*)
+cs_re_s:magenta,black:\] .* casts (.*)
+cs_re:magenta,black,bold:\] .* casting .*
+cs_re:magenta,black,bold:\] .* casts .*
+
+# REGEN / HEAL
+cs_re_s:white,black,bold:\] (.*) Healed .*
+cs_re:blue,black:\] .* Healed [0-9]+ hit points
+
+# ITEMS
+cs_re_s:magenta,black,bold:\] .* uses .* (special power)\.
+cs_re_s:white,black,bold:\] (.*) uses .*
+cs_re_s:blue,black:\] .* uses (.*)
+cs_re:magenta,black,bold:\] .* uses .*
+
+
+# DIALOG
+cs_re_s:white,black,bold:\] (.*): .*
+cs_re:white,black:\] .*: .*
+
+# fall thru
+cs_re:magenta,black,bold:.*
+#cs_re:black,black,bold:.*[\.!?]"?
+
+defaultcscheme:nwnlog
