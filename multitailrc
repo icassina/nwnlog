@@ -111,6 +111,7 @@ cs_re:yellow,blue,bold:\*miss\*
 cs_re:yellow,green,bold:\*success\*
 cs_re:yellow,red,bold:\*automatic success\*
 cs_re:yellow,magenta,bold:\*parried\*
+cs_re:black,yellow:\*resisted\*
 cs_re:white,red,bold:\*failure\*
 
 # Modifiers
