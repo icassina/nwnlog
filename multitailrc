@@ -32,6 +32,10 @@ cs_re_s:green,black:\] Weapon equipped as a (.*)\.
 cs_re:black,black,bold:\] Weapon equipped as a .*\.
 cs_re:black,black,bold:\] Equipped item swapped out\.
 
+# Tell
+cs_re_s:green,black,bold:\] (.*): \[Tell\] .*
+cs_re_s:black,green:\] .*: (\[Tell\]) .*
+cs_re:green,black,bold:\] .*: \[Tell\] .*
 
 # Party
 cs_re_s:cyan,black,bold:You have sent a Party Invitation to (.*)
@@ -146,7 +150,9 @@ cs_re:yellow,black,bold:.* Initiative Roll :
 #cs_re_s:blue: .* identified (.*)
 #cs_re:green:.* identified
 cs_re_s:white,black,bold:\] (.*) Taunt :
-cs_re:magenta,black,bold:\] .* Taunt :
+cs_re:black,black,bold:\] .* Taunt :
+cs_re_s:white,black,bold:\] (.*) Animal Empathy :
+cs_re:black,black,bold:\] .* Animal Empathy :
 cs_re_s:white,black,bold:\] (.*) Open Lock :
 cs_re:black,black,bold:\] .* Open Lock :
 cs_re_s:white,black,bold:\] (.*) Disable Trap :
