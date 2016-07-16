@@ -83,6 +83,23 @@ cs_re:red,black:.* Died
 # separators
 cs_re:green,black:[:\(\)\+\-\=]
 
+# CASTING
+cs_re_s:white,black,bold:\] (.*) casting .*
+cs_re_s:white,black,bold:\] (.*) casts .*
+cs_re_s:magenta,black:\] .* casting (.*)
+cs_re_s:magenta,black:\] .* casts (.*)
+cs_re:magenta,black,bold:\] .* casting .*
+cs_re:magenta,black,bold:\] .* casts .*
+
+# REGEN / HEAL
+cs_re_s:white,black,bold:\] (.*) Healed .*
+cs_re:blue,black:\] .* Healed [0-9]+ hit points
+
+# ITEMS
+cs_re_s:magenta,black,bold:\] .* uses .* (special power)\.
+cs_re_s:white,black,bold:\] (.*) uses .*
+cs_re_s:blue,black:\] .* uses (.*)
+cs_re:magenta,black,bold:\] .* uses .*
 
 # DAMAGE
 cs_re_s:white,black,bold: (.*) damages .*
@@ -117,9 +134,10 @@ cs_re:white,red,bold:\*failure\*
 # Modifiers
 cs_re:red,black:Threat Roll
 cs_re:black,red:Called Shot:
-cs_re:blue,white:(Improved )?Knockdown
+cs_re:red,white:(Improved )?Knockdown
 cs_re_s:white,red,bold:Called Shot: (Leg|Arm)
 cs_re:black,blue:Sneak Attack
+cs_re:yellow,blue,bold:Flurry of Blows
 cs_re:white,blue:Off Hand
 cs_re:white,red:Power Attack
 cs_re:white,magenta,bold:Attack Of Opportunity
@@ -129,7 +147,6 @@ cs_re_s:white,black,bold:\] (.*) attacks .*
 cs_re:blue,black,bold:\] .* attempts .* on .* : \*
 cs_re_s:cyan,black:\] .* attacks (.*) : \*.*\* :
 cs_re:yellow,black:\] .* attacks .* : \*.*\* :
-
 
 # SAVES
 cs_re_s:red,black:(Fortitude) Save
@@ -185,25 +202,6 @@ cs_re_s:white,black,bold:\] (.*) Immune to .*
 cs_re_s:yellow,black,bold:\] .* Immune to (.*)
 cs_re:blue,black,bold:\] .* : Immune to .*
 cs_re:black,black,bold:\] .* \*target concealed: [0-9]+%\* :
-
-# CASTING
-cs_re_s:white,black,bold:\] (.*) casting .*
-cs_re_s:white,black,bold:\] (.*) casts .*
-cs_re_s:magenta,black:\] .* casting (.*)
-cs_re_s:magenta,black:\] .* casts (.*)
-cs_re:magenta,black,bold:\] .* casting .*
-cs_re:magenta,black,bold:\] .* casts .*
-
-# REGEN / HEAL
-cs_re_s:white,black,bold:\] (.*) Healed .*
-cs_re:blue,black:\] .* Healed [0-9]+ hit points
-
-# ITEMS
-cs_re_s:magenta,black,bold:\] .* uses .* (special power)\.
-cs_re_s:white,black,bold:\] (.*) uses .*
-cs_re_s:blue,black:\] .* uses (.*)
-cs_re:magenta,black,bold:\] .* uses .*
-
 
 # DIALOG
 cs_re_s:white,black,bold:\] (.*): .*
